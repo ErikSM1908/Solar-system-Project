@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title> Solar System</title>
+        <link rel="stylesheet" href="solarsystem.css">
+        <img src="space-nasa (1).jpg"
+    </head>
+    <body>
+        <div class="circle">
+            <div class="sun"></div>
+            <div class="text">
+        <div id="line" onclick="line2()"> </div>
+        <div id="Mercury" onclick="Mercury2()"></div>
+        <div id="Venus" onclick="Venus2()"></div>
+    </div>
+    </div>
+    <style>
+        #line{
+            width: 150px;
+            Height: 150px;
+            position: relative;
+            background-color: black;
+            animation: mymove 2s infinite;
+            border-radius: 50%;
+        }
+        @keyframes mymove
+        {
+        }
+        #Mercury{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            background-color: blue;
+            animation: rawr 2s infinite;
+            border-radius: 50%;
+        }
+        #Venus{
+            width: 130px;
+            Height: 130px;
+            position: relative;
+            background-color: brown;
+            animation: JK 2s infinite;
+            border-radius: 50%;
+        }
+    </style>
+    <script>
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char, i) =>
+            <span style="transform:rotate(${i * 0.2}deg)">${char}</span>
+        ).join("")
+    </script>
+    </body>
+</html>
